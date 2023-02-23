@@ -8,6 +8,11 @@ web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/cache/*
 
+web/app/languages
+web/app/languages/*
+web/app/languages/plugins
+web/app/languages/plugins/*
+
 # WordPress
 web/wp
 web/.htaccess
