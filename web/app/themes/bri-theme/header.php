@@ -88,7 +88,7 @@
                 </a>
                 <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
                   <svg width="19" height="19">
-                    <use xlink:href="img/sprite.svg#close"></use>
+                    <use xlink:href="<?php echo get_template_directory_uri() ?>/img/sprite.svg#close"></use>
                   </svg>
                 </button>
               </div>
