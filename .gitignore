@@ -32,3 +32,4 @@ web/.htaccess
 wp-cli.local.yml
 
 secrets.md
+.DS_Store
