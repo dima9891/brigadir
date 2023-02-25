@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( '_S_VERSION', '1.0.4' );
 }
 
 /**
@@ -142,6 +142,7 @@ function bri_theme_scripts() {
 	wp_style_add_data( 'bri-theme-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'bri-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'bri-theme-main', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -176,3 +177,25 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Allow SVG
+add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
+	global $wp_version;
+	if ( $wp_version !== '4.7.1' ) {
+	   return $data;
+	}
+	$filetype = wp_check_filetype( $filename, $mimes );
+	return [
+		'ext'             => $filetype['ext'],
+		'type'            => $filetype['type'],
+		'proper_filename' => $data['proper_filename']
+	];
+  }, 10, 4 );
+  function cc_mime_types( $mimes ){
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+  }
+  add_filter( 'upload_mimes', 'cc_mime_types' );
+  function fix_svg() {
+	echo '';
+  }
+  add_action( 'admin_head', 'fix_svg' );

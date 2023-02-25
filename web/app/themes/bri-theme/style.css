@@ -747,11 +747,6 @@ textarea {
 	display: block;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
-}
-
 .updated:not(.published) {
 	display: none;
 }
@@ -1102,21 +1097,21 @@ select {
 
 @font-face {
   font-family: "PT Root UI";
-  src: url("/fonts/PTRootUI-Bold.woff2") format("woff2"), url("/fonts/PTRootUI-Bold.woff") format("woff");
+  src: url("fonts/PTRootUI-Bold.woff2") format("woff2"), url("fonts/PTRootUI-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PT Root UI";
-  src: url("/fonts/PTRootUI-Regular.woff2") format("woff2"), url("/fonts/PTRootUI-Regular.woff") format("woff");
+  src: url("fonts/PTRootUI-Regular.woff2") format("woff2"), url("fonts/PTRootUI-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "PT Root UI";
-  src: url("/fonts/PTRootUI-Medium.woff2") format("woff2"), url("/fonts/PTRootUI-Medium.woff") format("woff");
+  src: url("fonts/PTRootUI-Medium.woff2") format("woff2"), url("fonts/PTRootUI-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -1632,8 +1627,8 @@ body.no-scroll {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-mask: url("/img/icons/triangle.svg") no-repeat center/100%;
-          mask: url("/img/icons/triangle.svg") no-repeat center/100%;
+  -webkit-mask: url("img/icons/triangle.svg") no-repeat center/100%;
+          mask: url("img/icons/triangle.svg") no-repeat center/100%;
   background-color: var(--color-white);
 }
 .link-dropdown:hover::after {
@@ -1866,7 +1861,7 @@ body.no-scroll {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   right: 0;
-  background-image: url("/img/icons/chevron-right.svg");
+  background-image: url("img/icons/chevron-right.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1908,8 +1903,8 @@ body.no-scroll {
   height: 50%;
   bottom: initial;
   background-color: var(--color-dark);
-  -webkit-mask: url("/img/icons/chevron.svg") no-repeat center/contain;
-          mask: url("/img/icons/chevron.svg") no-repeat center/contain;
+  -webkit-mask: url("img/icons/chevron.svg") no-repeat center/contain;
+          mask: url("img/icons/chevron.svg") no-repeat center/contain;
   -webkit-transition: 200ms ease;
   -o-transition: 200ms ease;
   transition: 200ms ease;
@@ -2021,8 +2016,8 @@ body.no-scroll {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-mask: url("/img/icons/check.svg") no-repeat center/contain;
-          mask: url("/img/icons/check.svg") no-repeat center/contain;
+  -webkit-mask: url("img/icons/check.svg") no-repeat center/contain;
+          mask: url("img/icons/check.svg") no-repeat center/contain;
   background-color: #27ae60;
 }
 .checkbox__text {
@@ -2170,12 +2165,12 @@ body.no-scroll {
   margin-right: 10px;
 }
 .radio--img .radio__icon--truck {
-  -webkit-mask: url("/img/types-transport/1.png") no-repeat center/contain;
-          mask: url("/img/types-transport/1.png") no-repeat center/contain;
+  -webkit-mask: url("img/types-transport/1.png") no-repeat center/contain;
+          mask: url("img/types-transport/1.png") no-repeat center/contain;
 }
 .radio--img .radio__icon--manipulator {
-  -webkit-mask: url("/img/types-transport/2.png") no-repeat center/contain;
-          mask: url("/img/types-transport/2.png") no-repeat center/contain;
+  -webkit-mask: url("img/types-transport/2.png") no-repeat center/contain;
+          mask: url("img/types-transport/2.png") no-repeat center/contain;
 }
 
 .choices {
@@ -2211,8 +2206,8 @@ body.no-scroll {
   width: 12px !important;
   height: 6px !important;
   margin-top: 0 !important;
-  -webkit-mask-image: url("/images/icons/chevron.svg");
-          mask-image: url("/images/icons/chevron.svg");
+  -webkit-mask-image: url("images/icons/chevron.svg");
+          mask-image: url("images/icons/chevron.svg");
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -4222,8 +4217,8 @@ body.no-scroll {
       -ms-transform: translateY(-50%) rotate(-90deg);
           transform: translateY(-50%) rotate(-90deg);
   right: 0;
-  -webkit-mask: url("/img/icons/triangle.svg") no-repeat center/contain;
-          mask: url("/img/icons/triangle.svg") no-repeat center/contain;
+  -webkit-mask: url("img/icons/triangle.svg") no-repeat center/contain;
+          mask: url("img/icons/triangle.svg") no-repeat center/contain;
   background-color: var(--color-dark);
 }
 .mobile-menu__link img {
@@ -4435,8 +4430,8 @@ body.no-scroll {
       -ms-transform: translateY(-50%) rotate(-90deg);
           transform: translateY(-50%) rotate(-90deg);
   right: 0;
-  -webkit-mask: url("/img/icons/triangle.svg") no-repeat center/contain;
-          mask: url("/img/icons/triangle.svg") no-repeat center/contain;
+  -webkit-mask: url("img/icons/triangle.svg") no-repeat center/contain;
+          mask: url("img/icons/triangle.svg") no-repeat center/contain;
   background-color: var(--color-dark);
 }
 
@@ -4446,8 +4441,8 @@ body.no-scroll {
 .menu-mobile-box .accordion-control::after {
   width: 7px;
   height: 7px;
-  -webkit-mask: url("/img/icons/triangle.svg") no-repeat center/contain;
-          mask: url("/img/icons/triangle.svg") no-repeat center/contain;
+  -webkit-mask: url("img/icons/triangle.svg") no-repeat center/contain;
+          mask: url("img/icons/triangle.svg") no-repeat center/contain;
 }
 .menu-mobile-box__top {
   display: -webkit-box;
@@ -4564,8 +4559,8 @@ body.no-scroll {
   transition: 250ms ease;
   width: 7px;
   height: 7px;
-  -webkit-mask: url("/img/icons/triangle.svg") no-repeat center/contain;
-          mask: url("/img/icons/triangle.svg") no-repeat center/contain;
+  -webkit-mask: url("img/icons/triangle.svg") no-repeat center/contain;
+          mask: url("img/icons/triangle.svg") no-repeat center/contain;
 }
 
 @media (max-width: 991.98px) {
@@ -4652,8 +4647,8 @@ body.no-scroll {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-mask: url("/images/icons/chevron.svg") no-repeat center/100%;
-          mask: url("/images/icons/chevron.svg") no-repeat center/100%;
+  -webkit-mask: url("images/icons/chevron.svg") no-repeat center/100%;
+          mask: url("images/icons/chevron.svg") no-repeat center/100%;
   background-color: var(--color-white);
 }
 .menu__link--dropdown:hover::after {
@@ -4785,16 +4780,16 @@ body.no-scroll {
   transition: 200ms ease;
 }
 .socials__link--vk::after {
-  -webkit-mask: url("/img/socials/vk.svg") no-repeat center/contain;
-          mask: url("/img/socials/vk.svg") no-repeat center/contain;
+  -webkit-mask: url("img/socials/vk.svg") no-repeat center/contain;
+          mask: url("img/socials/vk.svg") no-repeat center/contain;
 }
 .socials__link--instagram::after {
-  -webkit-mask: url("/img/socials/instagram.svg") no-repeat center/contain;
-          mask: url("/img/socials/instagram.svg") no-repeat center/contain;
+  -webkit-mask: url("img/socials/instagram.svg") no-repeat center/contain;
+          mask: url("img/socials/instagram.svg") no-repeat center/contain;
 }
 .socials__link--telegram::after {
-  -webkit-mask: url("/img/socials/telegram.svg") no-repeat center/contain;
-          mask: url("/img/socials/telegram.svg") no-repeat center/contain;
+  -webkit-mask: url("img/socials/telegram.svg") no-repeat center/contain;
+          mask: url("img/socials/telegram.svg") no-repeat center/contain;
 }
 
 @media (max-width: 991.98px) {
@@ -4939,8 +4934,8 @@ body.no-scroll {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   right: 0;
-  -webkit-mask: url("/img/icons/chevron.svg") no-repeat center/contain;
-          mask: url("/img/icons/chevron.svg") no-repeat center/contain;
+  -webkit-mask: url("img/icons/chevron.svg") no-repeat center/contain;
+          mask: url("img/icons/chevron.svg") no-repeat center/contain;
   background-color: var(--color-dark);
   -webkit-transition: 250ms ease;
   -o-transition: 250ms ease;
@@ -5012,35 +5007,35 @@ body.no-scroll {
   font-size: 17px;
 }
 .advantages .advantages-item--delivery {
-  background-image: url("/img/advantages/1.png");
+  background-image: url("img/advantages/1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 39px;
   background-position: left top;
 }
 .advantages .advantages-item--guarantee {
-  background-image: url("/img/advantages/2.png");
+  background-image: url("img/advantages/2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 39px;
   background-position: left top;
 }
 .advantages .advantages-item--range {
-  background-image: url("/img/advantages/3.png");
+  background-image: url("img/advantages/3.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 39px;
   background-position: left top;
 }
 .advantages .advantages-item--prices {
-  background-image: url("/img/advantages/4.png");
+  background-image: url("img/advantages/4.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 39px;
   background-position: left top;
 }
 .advantages .advantages-item--rent {
-  background-image: url("/img/advantages/5.png");
+  background-image: url("img/advantages/5.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 39px;
@@ -8680,7 +8675,7 @@ body.no-scroll {
   -webkit-transform: translateY(10px);
       -ms-transform: translateY(10px);
           transform: translateY(10px);
-  background-image: url("/img/tooltip.png");
+  background-image: url("img/tooltip.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -8707,16 +8702,16 @@ body.no-scroll {
           transform: translateY(0);
 }
 .order .order-box__item:nth-child(1) .icon {
-  -webkit-mask: url("/img/types-delivery/1.png") no-repeat center/contain;
-          mask: url("/img/types-delivery/1.png") no-repeat center/contain;
+  -webkit-mask: url("img/types-delivery/1.png") no-repeat center/contain;
+          mask: url("img/types-delivery/1.png") no-repeat center/contain;
 }
 .order .order-box__item:nth-child(2) .icon {
-  -webkit-mask: url("/img/types-delivery/2.png") no-repeat center/contain;
-          mask: url("/img/types-delivery/2.png") no-repeat center/contain;
+  -webkit-mask: url("img/types-delivery/2.png") no-repeat center/contain;
+          mask: url("img/types-delivery/2.png") no-repeat center/contain;
 }
 .order .order-box__item:nth-child(3) .icon {
-  -webkit-mask: url("/img/types-delivery/3.png") no-repeat center/contain;
-          mask: url("/img/types-delivery/3.png") no-repeat center/contain;
+  -webkit-mask: url("img/types-delivery/3.png") no-repeat center/contain;
+          mask: url("img/types-delivery/3.png") no-repeat center/contain;
 }
 .order .order-box__inner {
   height: 100px;
@@ -9293,8 +9288,8 @@ body.no-scroll {
 .product .slider-thumbs__nav-control .swiper-button-prev::after,
 .product .slider-thumbs__nav-control .swiper-button-next::after {
   background-color: var(--color-dark);
-  -webkit-mask: url("/images/icons/chevron.svg") no-repeat center/contain;
-          mask: url("/images/icons/chevron.svg") no-repeat center/contain;
+  -webkit-mask: url("images/icons/chevron.svg") no-repeat center/contain;
+          mask: url("images/icons/chevron.svg") no-repeat center/contain;
 }
 .product .slider-thumbs__nav-control .swiper-button-prev {
   -webkit-transform: rotate(-90deg);
@@ -9341,8 +9336,8 @@ body.no-scroll {
   background-color: var(--color-dark);
   width: 50%;
   height: 50%;
-  -webkit-mask: url("/images/icons/chevron.svg") no-repeat center/contain;
-          mask: url("/images/icons/chevron.svg") no-repeat center/contain;
+  -webkit-mask: url("images/icons/chevron.svg") no-repeat center/contain;
+          mask: url("images/icons/chevron.svg") no-repeat center/contain;
 }
 .product .slider-thumbs__main .swiper-button-prev {
   left: 10px;
@@ -9418,8 +9413,8 @@ body.no-scroll {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-mask: url("/images/content/search.png") no-repeat center/contain;
-          mask: url("/images/content/search.png") no-repeat center/contain;
+  -webkit-mask: url("images/content/search.png") no-repeat center/contain;
+          mask: url("images/content/search.png") no-repeat center/contain;
   background-color: var(--color-white);
 }
 .product .slider-thumbs__scale:hover {
@@ -10881,7 +10876,7 @@ body.no-scroll {
   content: "";
   top: -10px;
   left: 0;
-  background-image: url("/img/icons/quote.svg");
+  background-image: url("img/icons/quote.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
