@@ -30,5 +30,5 @@ Duplicate post
 # How to set up for local dev
 
 1. Clone repository and run 
-```sh $ composer install```
+```composer install```
 from the main folder
