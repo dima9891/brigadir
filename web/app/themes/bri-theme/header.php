@@ -83,7 +83,7 @@
           <div class="mobile-menu__body">
             <div class="mobile-menu__top">
               <div class="mobile-menu__header">
-			  	<a class="mobile-menu__logo logo" href="/">
+			  	<a class="mobile-menu__logo logo" href="<?php echo home_url(); ?>">
                   <img src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>" alt="Логотип" />
                 </a>
                 <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
@@ -515,7 +515,7 @@
               <span class="header__toggle-line"></span>
             </button>
 
-            <a class="header__logo logo" href="/">
+            <a class="header__logo logo" href="<?php echo home_url(); ?>">
               <img src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>" alt="Логотип" />
             </a>
 
