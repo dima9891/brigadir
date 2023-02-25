@@ -20,15 +20,16 @@ Brigadir site made as a test.
 
 ## Technologies used:
 
-Bedrock
+- Bedrock
 
 ## Plugins used
 
-Woocommerce
-Duplicate post
+- Woocommerce
+- Duplicate post
 
 # How to set up for local dev
 
-1. Clone repository and run 
-```composer install```
-from the main folder
+1. Clone repository and run ```composer install``` from the main folder
+2. Set up database and change settings in .env file if needed
+3. Download 'uploads' folder (it contains all uploaded images) - 
+4. Place upload folder in web/app/
