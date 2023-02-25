@@ -663,50 +663,14 @@ get_header();
 
             <div class="news__slider swiper">
               <ul class="news__slides swiper-wrapper">
-                <li class="news__slide swiper-slide">
-                  <article class="news-card" style="background-image: url('img/news/1.jpg')">
-                    <div class="news-card__inner">
-                      <span class="news-card__date">1 сентября 2022</span>
-                      <div class="news-card__bottom">
-                        <h3 class="news-card__title">
-                          <a href="#">
-                            Не остановить. Цены на строительные материалы ставят
-                            рекорды
-                          </a>
-                        </h3>
-                        <a class="news-card__link" href="#">Подробнее</a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                <li class="news__slide swiper-slide">
-                  <article class="news-card" style="background-image: url('img/news/2.jpg')">
-                    <div class="news-card__inner">
-                      <span class="news-card__date">1 сентября 2022</span>
-                      <div class="news-card__bottom">
-                        <h3 class="news-card__title">
-                          <a href="#">
-                            С чего начать ремонт квартиры. Этапы пошагово
-                          </a>
-                        </h3>
-                        <a class="news-card__link" href="#">Подробнее</a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                <li class="news__slide swiper-slide">
-                  <article class="news-card" style="background-image: url('img/news/3.jpg')">
-                    <div class="news-card__inner">
-                      <span class="news-card__date">1 сентября 2022</span>
-                      <div class="news-card__bottom">
-                        <h3 class="news-card__title">
-                          <a href="#"> Что устарело в мире ремонта квартир? </a>
-                        </h3>
-                        <a class="news-card__link" href="#">Подробнее</a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
+                <?php 
+                $args = array('category_name' => 'news');
+                $cpt_query = new WP_Query($args);
+                if ( $cpt_query->have_posts() ) :
+                  while ( $cpt_query->have_posts() ) : $cpt_query->the_post();
+                    get_template_part( 'template-parts/news-preview');
+                  endwhile;
+                 endif; ?>
               </ul>
             </div>
 

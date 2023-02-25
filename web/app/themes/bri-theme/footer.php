@@ -18,7 +18,7 @@
 			</div>
 
 			<div class="footer__middle">
-			<a class="footer__logo logo" href="/">
+			<a class="footer__logo logo" href="<?php echo home_url(); ?>">
 				<img src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>" alt="логотип" />
 			</a>
 			<div class="footer__divider"></div>

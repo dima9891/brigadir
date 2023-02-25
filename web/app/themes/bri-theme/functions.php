@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.4' );
+	define( '_S_VERSION', '1.0.1' );
 }
 
 /**
@@ -199,3 +199,4 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
 	echo '';
   }
   add_action( 'admin_head', 'fix_svg' );
+  
