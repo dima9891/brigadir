@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.1' );
+	define( '_S_VERSION', '1.0.2' );
 }
 
 /**
@@ -131,6 +131,15 @@ function bri_theme_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Header', 'bri-theme' ),
+			'id'            => 'middle-header',
+			'description'   => esc_html__( 'Add widgets here.', 'bri-theme' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+		)
+	);
 }
 add_action( 'widgets_init', 'bri_theme_widgets_init' );
 
@@ -181,22 +190,26 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
 	global $wp_version;
 	if ( $wp_version !== '4.7.1' ) {
-	   return $data;
+		return $data;
 	}
 	$filetype = wp_check_filetype( $filename, $mimes );
 	return [
 		'ext'             => $filetype['ext'],
 		'type'            => $filetype['type'],
 		'proper_filename' => $data['proper_filename']
-	];
-  }, 10, 4 );
-  function cc_mime_types( $mimes ){
+		];
+}, 10, 4 );
+  
+function cc_mime_types( $mimes ){
 	$mimes['svg'] = 'image/svg+xml';
 	return $mimes;
-  }
-  add_filter( 'upload_mimes', 'cc_mime_types' );
-  function fix_svg() {
+}
+
+add_filter( 'upload_mimes', 'cc_mime_types' );
+
+function fix_svg() {
 	echo '';
-  }
-  add_action( 'admin_head', 'fix_svg' );
+}
+
+add_action( 'admin_head', 'fix_svg' );
   

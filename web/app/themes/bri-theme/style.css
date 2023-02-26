@@ -3106,7 +3106,6 @@ body.no-scroll {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 580px;
 }
 .header__schedule {
   display: -webkit-box;
