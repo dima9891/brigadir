@@ -543,6 +543,11 @@
               Каталог
             </button>
 
+            <?php
+              if ( is_active_sidebar( 'middle-header' ) ) : ?>
+                <?php dynamic_sidebar( 'middle-header' ); ?>
+            <?php endif; ?>
+
             <form class="header__search search">
               <div class="search__group">
                 <input class="search__input" type="text" placeholder="Введите наименование товара " />
