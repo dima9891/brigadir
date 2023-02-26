@@ -41,7 +41,8 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
     "wpackagist-plugin/woocommerce": "^7.4",
-    "wpackagist-plugin/duplicate-post": "^4.5"
+    "wpackagist-plugin/duplicate-post": "^4.5",
+    "wildwolf/wp-cyrtolat": "^3.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
