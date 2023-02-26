@@ -10,6 +10,12 @@
  */
 
 ?>
+
+<?php 
+    $contacts = get_post(68);
+    $phone_symbols = array(" ", "(", ")","-");
+?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -103,7 +109,7 @@
                       stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
 
-                  г.Павлово, ул.Чкалова, 49
+                  <?php echo $contacts->con_adress; ?>
                 </address>
                 <a class="mobile-menu__cabinet" href="#">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -423,7 +429,7 @@
                     d="M16.25 8.125C16.25 13.75 10 18.125 10 18.125C10 18.125 3.75 13.75 3.75 8.125C3.75 6.4674 4.40848 4.87769 5.58058 3.70558C6.75269 2.53348 8.3424 1.875 10 1.875C11.6576 1.875 13.2473 2.53348 14.4194 3.70558C15.5915 4.87769 16.25 6.4674 16.25 8.125V8.125Z"
                     stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                г.Павлово, ул.Чкалова, 49
+                <?php echo $contacts->con_adress; ?>
               </address>
 
               <div class="item">
@@ -433,13 +439,13 @@
                     stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
 
-                <a href="tel:+78317135050">8 831 713 50 50</a>
+                <a href="tel:<?php echo str_replace($phone_symbols, "", $contacts->con_phone_1);?>"><?php echo $contacts->con_phone_1; ?></a>
                 <span class="divider">|</span>
-                <a href="tel:+79506032111">8 (950) 603-21-11</a>
+                <a href="tel:<?php echo str_replace($phone_symbols, "", $contacts->con_phone_2);?>"><?php echo $contacts->con_phone_2; ?></a>
               </div>
 
               <div class="item">
-                <a href="mailto:b.brigadirov@yandex.ru">
+                <a href="mailto:<?php echo $contacts->con_email; ?>">
                   <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M10 13.625C11.7259 13.625 13.125 12.2259 13.125 10.5C13.125 8.77411 11.7259 7.375 10 7.375C8.27411 7.375 6.875 8.77411 6.875 10.5C6.875 12.2259 8.27411 13.625 10 13.625Z"
@@ -449,7 +455,7 @@
                       stroke="#222222" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
 
-                  b.brigadirov@yandex.ru
+                  <?php echo $contacts->con_email; ?>
                 </a>
               </div>
               <div class="item">
@@ -463,8 +469,7 @@
                     stroke-linejoin="round" />
                 </svg>
 
-                пн-пт 8:00-19:00 <span class="divider">|</span> сб 8:00-16;00 вс
-                8:00-15:00
+                <?php echo $contacts->con_work_hours_1; ?> <span class="divider">|</span> <?php echo $contacts->con_work_hours_2; ?> <?php echo $contacts->con_work_hours_3; ?>
               </div>
             </div>
           </div>
@@ -488,8 +493,8 @@
                     stroke-linejoin="round" />
                 </svg>
 
-                <span>пн-пт 8:00-19:00</span> <span>сб 8:00-16:00</span>
-                <span>вс 8:00-15:00</span>
+                <span><?php echo $contacts->con_work_hours_1; ?></span> <span><?php echo $contacts->con_work_hours_2; ?></span>
+                <span><?php echo $contacts->con_work_hours_3; ?></span>
               </div>
               <div class="header__address">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -501,7 +506,7 @@
                     stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
 
-                <span>г.Павлово, ул.Чкалова, 49</span>
+                <span><?php echo $contacts->con_adress; ?></span>
               </div>
             </div>
           </div>
