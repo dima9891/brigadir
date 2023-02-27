@@ -19,14 +19,21 @@
 
 			<div class="footer__middle">
 			<a class="footer__logo logo" href="<?php echo home_url(); ?>">
-				<img src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>" alt="логотип" />
+				<?php
+				// check to see if the logo exists and add it to the page
+				if ( get_theme_mod( 'footer_logo' ) ) : ?>
+				<img src="<?php echo get_theme_mod( 'footer_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" >
+				<?php // add a fallback if the logo doesn't exist
+				endif;?>
 			</a>
 			<div class="footer__divider"></div>
 			</div>
 
 			<div class="footer__bottom">
 			<div class="footer__copy">
-				© 2000 - 2022 Строительный магазин “Бригадир”
+				<?php if ( get_theme_mod( 'copyright_text' ) ) : 
+					echo get_theme_mod( 'copyright_text' );
+				endif; ?>
 			</div>
 			<div class="footer__payment">
 				<img src="<?php echo get_template_directory_uri() ?>/img/footer-payment.png" alt="payment" />

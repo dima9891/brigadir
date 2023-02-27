@@ -31,6 +31,21 @@ function bri_theme_customize_register( $wp_customize ) {
 			)
 		);
 	}
+
+	$wp_customize->add_setting('footer_logo');
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'footer_logo',
+	array(
+		'label' => 'Лого для футера',
+		'section' => 'title_tagline',
+		'settings' => 'footer_logo',
+	) ) );
+ 
+	 $wp_customize->add_setting( 'copyright_text' );
+	 $wp_customize->add_control( 'copyright_text', array(
+		 'id'=> 'id',
+		 'label' => __( 'Текст копирайта', 'TextDomain' ),
+		 'section' => 'title_tagline'
+	 ) );
 }
 add_action( 'customize_register', 'bri_theme_customize_register' );
 
