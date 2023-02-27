@@ -212,4 +212,28 @@ function fix_svg() {
 }
 
 add_action( 'admin_head', 'fix_svg' );
-  
+
+
+/**
+ * How much time left
+ *
+ * @param mixed $date
+ * @return
+ */
+function downcounter($date){
+	$check_time = $date - time();
+	if($check_time <= 0){
+		return false;
+	}
+
+	$days = floor($check_time/86400);
+	$hours = floor(($check_time%86400)/3600);
+	$minutes = floor(($check_time%3600)/60);
+
+	$str = '';
+	if($days > 0) $str .= $days.'д'.' : ';
+	if($hours > 0) $str .= $hours.'ч'.' : ';
+	if($minutes > 0) $str .= $minutes.'м';
+
+	return $str;
+}
