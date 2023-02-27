@@ -8,15 +8,14 @@ Brigadir site made as a test.
 - advantages
 - display products
 - mobile menu
-- contacts
 
 ЧТО ДОЛЖНО РЕДАКТИРОВАТЬСЯ ИЗ АДМИН-ПАНЕЛИ:
 1. Блок со слайдером.
 2. Блок преимуществ.
 3. Блок товаров. Возможность выбирать какие товары будут отображаться в этом блоке.
-Возможность добавлять товары в корзину.
+Возможность добавлять товары в корзину. - В блоке отображаются товары у которых стоит галочка Рекомендуемые (можно поставить ее в Свойствах не заходя в редактирование товара)
 4. Блок акций и предложений. 
-6. Блок контактов.
+6. Блок контактов - Страницы -> Контакты (редактировать Произвольные поля, если они вдруг не отображаются - зайти в Предпочтения -> Панели -> включить Произвольные поля)
 
 ## Technologies used:
 
@@ -26,10 +25,12 @@ Brigadir site made as a test.
 
 - Woocommerce
 - Duplicate post
+- Cyr-to-Lat
 
 # How to set up for local dev
 
 1. Clone repository and run ```composer install``` from the main folder
 2. Set up database and change settings in .env file if needed
-3. Download 'uploads' folder (it contains all uploaded images) - 
-4. Place upload folder in web/app/
+3. Run Find/Replace in database for proper work (I recommend using https://github.com/interconnectit/Search-Replace-DB)
+3. Download 'uploads' folder (it contains all uploaded images) - TODO
+4. Place 'uploads' folder in web/app/
