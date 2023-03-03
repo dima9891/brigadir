@@ -29,7 +29,7 @@ Brigadir site made as a test.
 # How to set up for local dev
 
 1. Clone repository and run ```composer install``` from the main folder
-2. Set up database and change settings in .env file if needed
+2. Set up database and change settings in .env file if needed. Database backup - 
 3. Run Find/Replace in database for proper work (I recommend using https://github.com/interconnectit/Search-Replace-DB)
-3. Download 'uploads' folder (it contains all uploaded images) - TODO
+3. Download 'uploads' folder (it contains all uploaded images) - https://cloud.mail.ru/public/EVDd/55j7CSZPW
 4. Place 'uploads' folder in web/app/
